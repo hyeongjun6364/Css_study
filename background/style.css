@@ -1,0 +1,101 @@
+.like-button {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* ▼ WHERE YOUR CODE BEGINS */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+.card-image{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-image: url('./assets/img-house.jpg');
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center center;
+    border-radius: 6px;
+}
+.card{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 840px;
+    height: 248px;
+}
+.like-button{
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border:none;
+    background-image: url('./assets/icon-favorite.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.property-type span{
+    margin-left: 8px;
+}
+.plus-badge{
+    display: inline-block;
+    background-color: #92174D; 
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+    padding: 1px 8px;
+    border-radius: 4px;
+    text-align: center;
+}
+.card-content{
+    margin-left: 24px;
+    
+}
+.card-title{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+.property-rate span{
+    font-size: 16px;
+    font-weight: 400;
+    color: #7D858F;
+}
+.property-detail span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #7D858F;
+    
+}
+.property-type span{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #7D858F;
+}
+.property-rate::before{
+    content: '';
+    position: relative;
+    top:2px;
+    display: inline-block;
+    background-image: url('./assets/icon-star.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+
+}
