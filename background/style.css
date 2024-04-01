@@ -3,99 +3,146 @@
   }
   
   /* ▼ WHERE YOUR CODE BEGINS */
+  
   * {
     box-sizing: border-box;
     margin: 0;
   }
-.card-image{
+  
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  button {
+    border: none;
+  }
+  
+  .sr-only {
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  
+  .card {
+    display: flex;
+    width: 840px;
+    padding: 24px;
+    background-color: #fff;
+  }
+  
+  .card-image {
     position: relative;
     width: 300px;
     height: 200px;
-    background-image: url('./assets/img-house.jpg');
-    background-repeat: no-repeat;
-    background-size:cover ;
-    background-position: center center;
     border-radius: 6px;
-}
-.card{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 840px;
-    height: 248px;
-}
-.like-button{
+    margin-right: 24px;
+    background-image: url(./assets/img-house.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .like-button {
     position: absolute;
-    top:0;
-    left: 0;
-    margin-top: 12px;
-    margin-left: 12px;
+    top: 12px;
+    left: 12px;
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border:none;
-    background-image: url('./assets/icon-favorite.svg');
+    background-color: #fff;
+    background-image: url(./assets/icon-favorite.svg);
+    background-size: 24px 24px;
     background-repeat: no-repeat;
     background-position: center center;
-}
-.card-header{
+    cursor: pointer;
+  }
+  
+  .card-content {
+    flex-grow: 1;
+  }
+  
+  .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
-}
-.property-type span{
-    margin-left: 8px;
-}
-.plus-badge{
+  }
+  
+  .plus-badge {
     display: inline-block;
-    background-color: #92174D; 
-    font-size: 14px;
-    font-weight: 500;
-    color: #FFFFFF;
     padding: 1px 8px;
     border-radius: 4px;
-    text-align: center;
-}
-.card-content{
-    margin-left: 24px;
-    
-}
-.card-title{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 32px;
-    margin-bottom: 16px;
-}
-.property-rate span{
-    font-size: 16px;
-    font-weight: 400;
-    color: #7D858F;
-}
-.property-detail span{
+    margin-right: 8px;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    color: #7D858F;
-    
-}
-.property-type span{
+    line-height: 1.4285714286;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #92174d;
+  }
+  
+  .property-type span {
     font-size: 16px;
-    font-weight: 400;
     line-height: 1.25;
-    color: #7D858F;
-}
-.property-rate::before{
-    content: '';
-    position: relative;
-    top:2px;
-    display: inline-block;
-    background-image: url('./assets/icon-star.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    color: #7d858f;
+  }
+  
+  .property-rate {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .property-rate::before {
+    content: "";
+    display: block;
     width: 16px;
     height: 16px;
-
-}
+    margin-right: 4px;
+    background-image: url(./assets/icon-star.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .property-rate {
+    font-size: 16px;
+    line-height: 1.25;
+    color: #7d858f;
+  }
+  
+  .property-rate strong {
+    margin-right: 2px;
+    font-weight: 400;
+    color: #151b26;
+  }
+  
+  .card-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #151b26;
+  }
+  
+  .property-detail {
+    font-size: 14px;
+    line-height: 1.1428571429;
+    color: #7d858f;
+  }
+  
+  .property-detail div:first-child {
+    margin-bottom: 8px;
+  }
+  
+  .property-detail dd span::after {
+    content: "·";
+    margin: 0 6px;
+  }
+  
+  .property-detail dd span:last-child::after {
+    content: "";
+    margin: 0;
+  }
